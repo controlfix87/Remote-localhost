@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001 /* RemoteLocalhostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001; };
+		A1000002 /* TunnelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002; };
+		A1000003 /* TunnelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003; };
+		A1000004 /* SSHTunnelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004; };
+		A1000005 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005; };
+		A1000006 /* TunnelFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006; };
+		A1000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000007; };
+		A1000008 /* AutoStartManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000009; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000001 /* RemoteLocalhostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLocalhostApp.swift; sourceTree = "<group>"; };
+		A2000002 /* TunnelConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelConfig.swift; sourceTree = "<group>"; };
+		A2000003 /* TunnelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelStore.swift; sourceTree = "<group>"; };
+		A2000004 /* SSHTunnelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTunnelManager.swift; sourceTree = "<group>"; };
+		A2000005 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		A2000006 /* TunnelFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelFormView.swift; sourceTree = "<group>"; };
+		A2000007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000008 /* RemoteLocalhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteLocalhost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000009 /* AutoStartManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoStartManagerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A3000001 = {
+			isa = PBXGroup;
+			children = (
+				A3000002 /* RemoteLocalhost */,
+				A3000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3000002 /* RemoteLocalhost */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001 /* RemoteLocalhostApp.swift */,
+				A2000002 /* TunnelConfig.swift */,
+				A2000003 /* TunnelStore.swift */,
+				A2000004 /* SSHTunnelManager.swift */,
+				A2000005 /* MenuBarView.swift */,
+				A2000006 /* TunnelFormView.swift */,
+				A2000009 /* AutoStartManagerView.swift */,
+				A2000007 /* Assets.xcassets */,
+			);
+			path = RemoteLocalhost;
+			sourceTree = "<group>";
+		};
+		A3000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2000008 /* RemoteLocalhost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4000001 /* RemoteLocalhost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6000003 /* Build configuration list for PBXNativeTarget "RemoteLocalhost" */;
+			buildPhases = (
+				A5000001 /* Sources */,
+				A5000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteLocalhost;
+			productName = RemoteLocalhost;
+			productReference = A2000008 /* RemoteLocalhost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A6000001 /* Build configuration list for PBXProject "RemoteLocalhost" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3000001;
+			productRefGroup = A3000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4000001 /* RemoteLocalhost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000007 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001 /* RemoteLocalhostApp.swift in Sources */,
+				A1000002 /* TunnelConfig.swift in Sources */,
+				A1000003 /* TunnelStore.swift in Sources */,
+				A1000004 /* SSHTunnelManager.swift in Sources */,
+				A1000005 /* MenuBarView.swift in Sources */,
+				A1000006 /* TunnelFormView.swift in Sources */,
+				A1000008 /* AutoStartManagerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A6000004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Remote localhost";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobihen.remotelocalhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		A6000005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Remote localhost";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobihen.remotelocalhost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		A6000006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A6000007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6000001 /* Build configuration list for PBXProject "RemoteLocalhost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6000006 /* Debug */,
+				A6000007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6000003 /* Build configuration list for PBXNativeTarget "RemoteLocalhost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6000004 /* Debug */,
+				A6000005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A4000002 /* Project object */;
+}
