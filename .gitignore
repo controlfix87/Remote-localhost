@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Build products
+build/
+DerivedData/
+*.app
+*.zip
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode user state
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+# Claude Code local settings
+.claude/
