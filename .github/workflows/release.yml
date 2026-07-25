@@ -1,0 +1,75 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release (e.g. v1.1)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build (ad-hoc signed Release)
+        run: |
+          xcodebuild -project RemoteLocalhost.xcodeproj \
+            -scheme RemoteLocalhost \
+            -configuration Release \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=YES \
+            build
+
+      - name: Zip app bundle
+        run: |
+          cd build/Build/Products/Release
+          ditto -c -k --sequesterRsrc --keepParent RemoteLocalhost.app RemoteLocalhost.zip
+
+      - name: Determine tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.name }}
+          name: ${{ steps.tag.outputs.name }}
+          files: build/Build/Products/Release/RemoteLocalhost.zip
+          body: |
+            ## Features
+            - Menu bar only — no dock icon, no main window.
+            - Multiple named tunnels, each with its own host, ports, and credentials.
+            - Auth via SSH key (with optional passphrase) or password — connects non-interactively, no terminal prompts.
+            - Configurable remote bind host (`127.0.0.1`, `localhost`, or a custom address).
+            - Live status per tunnel with logs for debugging auth/forwarding failures.
+            - Optional auto-start per tunnel on app launch.
+            - "Clear Stale" cleans up dead tunnels and orphaned SSH processes.
+            - Tunnels persist across launches.
+
+            ## Install
+            1. Download `RemoteLocalhost.zip` below and unzip it.
+            2. Move `RemoteLocalhost.app` to `/Applications`.
+            3. Right-click the app and choose **Open** the first time (it's ad-hoc signed, not notarized, so Gatekeeper will otherwise block it as from an "unidentified developer").
+
+            ## Requirements
+            macOS 13.0+

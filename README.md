@@ -36,6 +36,8 @@ without keeping a terminal window open.
 2. Select the `RemoteLocalhost` scheme and hit **Run** (or **Archive** for a Release build).
 3. Click the globe icon in the menu bar, then `+` to add a tunnel.
 
+Or just grab the latest build from [Releases](../../releases) — built and published automatically by CI on every `vX.Y.Z` tag.
+
 ## Notes
 
 - SSH runs with `StrictHostKeyChecking=no` for convenience with hosts you already trust.
