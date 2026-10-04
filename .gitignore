@@ -17,5 +17,3 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 
-# Claude Code local settings
-.claude/
